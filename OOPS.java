@@ -1,3 +1,4 @@
+import bank.*;
 class pen{
     String color;
     String type;
@@ -19,6 +20,7 @@ class Student{
         System.out.println(this.age);
     }
 }
+
 public class OOPS {
     public static void main(String[] args) {
 
@@ -27,6 +29,7 @@ public class OOPS {
         student.name="Harshala";
         student.age=20;
         student.printInfo();
+
 
 
 
