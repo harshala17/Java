@@ -5,10 +5,14 @@ public class Employee {
     Employee(){
 
     }
-    Employee(int salary,String name,int id){  //Parameterized Constructor.
-        this.salary=salary;
-        this.name=name;
-        this.id=id;
+//    Employee(int salary,String name,int id){  //Parameterized Constructor.
+//        this.salary=salary;
+//        this.name=name;
+//        this.id=id;
+//    }
+
+    public String getName() {
+        return name;
     }
 
     public int getSalary() {
@@ -29,6 +33,7 @@ public class Employee {
 
     public static void main(String[] args) {
         int responseSalary;
+        String responseName;
 
 
             Employee employee1=new Employee();
@@ -38,6 +43,8 @@ public class Employee {
             employee1.setSalary(40000);
             responseSalary= employee1.getSalary();
             System.out.println(responseSalary);
+            responseName=employee1.getName();
+            System.out.println(responseName);
 
 
 

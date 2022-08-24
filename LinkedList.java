@@ -35,7 +35,6 @@ public class LinkedList {
                     head=newNode;
                     return;
                 }
-
                 //to traverse any linkedlist we create a node and assign it to head.
                 //and update the current node
                 Node cuurentNode=head;
@@ -44,14 +43,28 @@ public class LinkedList {
                 while (cuurentNode.next!=null){
                     cuurentNode=cuurentNode.next;
                 }
-
+                cuurentNode.next=newNode;
             }
             public void deleteFirst(){
+
                         if (head==null){
                             System.out.println("The list is empty.");
                             return;
                         }
                         head=head.next;
+                }
+
+                public void printList(){
+                    Node cuurentNode=head;
+                    if (head==null){
+                        System.out.println("The list is empty.");
+                        return;
+                    }
+                    while (cuurentNode.next!=null){
+                        System.out.print(cuurentNode.data+" -> ");
+                        cuurentNode=cuurentNode.next;
+                    }
+                    System.out.print("NULL");
                 }
 
                 public  void deleteLast(){
@@ -77,6 +90,8 @@ public class LinkedList {
         LinkedList linkedList=new LinkedList();
         linkedList.addFirst("a");
         linkedList.addFirst("is");
+        linkedList.addFirst("hello");
+        linkedList.printList();
 
             
     }
